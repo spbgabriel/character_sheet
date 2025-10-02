@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DnD Sheet Generator</title>
+        <link rel="stylesheet" href="stylesheet_dnd.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <h1>Dungeons and Dragons</h1>
+        <div class="character_sheet_subtitle">
+            <i class="fa-solid fa-dragon fa-2x"></i>
+            <h3>Character sheet - 5th Edition</h3>
+            <i class="fa-solid fa-dragon fa-2x"></i>
+        </div>
+    </header>
+
+    <main>
+        <h3>Create your character from zero!</h3>
+            <h4>Personal information and background</h4>
+            <form class="general_sheet_box">
+                <!--name of the player - text box-->
+                <label for="player-name" class="form_title">Player's name:</label>
+                    <input type="text" name="Your name" placeholder="Your name" class="form-position">
+                <!--name of the character - text box-->
+                <label for="character-name" class="form_title">Character's name:</label>
+                    <input type="text" name="character-name" placeholder="Your character's name" class="form-position">
+                <!--Race - dropdown list with all official races of dnd beyond-->
+                    <!--another option is to make a radio form with cards that open with the selected race. this has a more visual effect for the user-->
+                <label for="race-list" class="form_title">Race</label>
+                    <select id="race-list" name="race-list" class="form-position">
+                        <option disabled selected>Choose one!</option>
+                        <option value="aasimar" data-description="Mortals with a celestial heritage, gaining divine powers like healing and damage resistance.">Aasimar</option>
+                        <option value="dragonborn" data-description="Humanoids with a draconic lineage, able to breathe elemental energy and resist damage.">Dragonborn</option>
+                        <option value="dwarf" data-description="Resilient people with a connection to stone, possessing strong beards, poison resistance, and Darkvision.">Dwarf</option>
+                        <option value="elf" data-description="Graceful and long-lived beings with a Feywild ancestry, gifted with Darkvision and innate magic.">Elf</option>
+                        <option value="gnome" data-description="Curious and clever beings known for their ingenuity and a knack for magic, with a special defense against spells.">Gnome</option>
+                        <option value="goliath" data-description="Giant-kin known for their immense strength and powerful builds.">Goliath</option>
+                        <option value="halfling" data-description="Small and brave folk, blessed with an incredible sense of luck that can save them from failure.">Halfling</option>
+                        <option value="human" data-description="The most versatile of all species, gaining extra skills and a bonus feat to excel in many roles.">Human</option>
+                        <option value="orc" data-description="Tough and relentless people, able to endure more punishment and use a burst of speed in combat.">Orc</option>
+                        <option value="tielfling" data-description="Descendants of fiends, identifiable by their horns and tails, who possess innate spellcasting and resistance to fire or other damage.">Tiefling</option>
+                    </select>
+                <!--Class - dropdown list with all official classes of the dnd beyond-->
+                <label for="class" class="form_title">Class:</label>
+                    <div class="class-list">
+                        <!--in the style, make two columns of 6 (try to make this using grid, instead of flex box)-->
+                        <input type="radio" id="barbarian" name="Barbarian" value="barbarian">
+                            <label for="barbarian">Barbarian</label>
+                        <input type="radio" id="bard" name="Bard" value="bard">
+                            <label for="barbarian">Bard</label>
+                        <input type="radio" id="cleric" name="Cleric" value="cleric">
+                            <label for="barbarian">Cleric</label>
+                        <input type="radio" id="druid" name="Druid" value="druid">
+                            <label for="barbarian">Druid</label>
+                        <input type="radio" id="druid" name="Druid" value="druid">
+                            <label for="druid">Druid</label>
+                        <input type="radio" id="fighter name="Fighter" value="fighter">
+                            <label for="fighter">Fighter</label>
+                        <input type="radio" id="monk" name="Monk" value="monk">
+                            <label for="monk">Monk</label>
+                        <input type="radio" id="paladin" name="Paladin" value="Paladin">
+                            <label for="paladin">Paladin</label>
+                        <input type="radio" id="ranger" name="Ranger" value="ranger">
+                            <label for="ranger">Ranger</label>
+                        <input type="radio" id="rogue" name="Rougue" value="rougue">
+                            <label for="rougue">Rougue</label>
+                        <input type="radio" id="sorcerer" name="Sorcerer" value="sorcerer">
+                            <label for="sorcerer">Sorcerer</label>
+                        <input type="radio" id="warlock" name="Warlock" value="warlock">
+                            <label for="warlock">Warlock</label>
+                        <input type="radio" id="wizard" name="Wizard" value="wizard">
+                            <label for="wizard">Wizard</label>
+                        <!--add a multiclass section?-->
+                    </div>
+                <!--Background - dropdown list with all official backgrounds of the dnd beyond-->
+                <label for="background" class="form_title">Background</label>
+                    <select id="background-list" name="background-list" class="form-position">
+                        <option disabled selected>Choose one!</option>
+                        <option value="acolyte">Acolyte</option>
+                        <option value="artisan">Artisan</option>
+                        <option value="charlatan">Charlatan</option>
+                        <option value="criminal">Criminal</option>
+                        <option value="entertainer">Entertainer</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="guard">Guard</option>
+                        <option value="guide">Guide</option>
+                        <option value="hermit">Hermit</option>
+                        <option value="merchant">Merchant</option>
+                        <option value="noble">Noble</option>
+                        <option value="sage">Sage</option>
+                        <option value="sailor">Sailor</option>
+                        <option value="scribe">Scribe</option>
+                        <option value="soldier">Soldier</option>
+                        <option value="wayfarer">Wayfarer</option>
+                    </select>
+                <!--Alignment - textbox-->
+                <label for="alignment" class="form_title">Alignment</label>
+                    <input type="text" name="alignment" placeholder="ex.: Lawful good" class="form-position">
+                <!--starting level-->
+                <label for="starting-level" class="form_title">Starting level:</label>
+                    <input type="number" id="level" name="Starting level" step="1" class="form-position">
+                <!--next step button-->
+                <input type="submit" value="Stats and skills" class="next_button">
+            </form>
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
+
+
+
